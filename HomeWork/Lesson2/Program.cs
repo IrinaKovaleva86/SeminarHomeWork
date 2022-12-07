@@ -14,7 +14,7 @@ Console.WriteLine(result);
 */
 
 // Задача 2: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
-
+/*
 int ThreeDigit(int num)
 {
     int result = -1;
@@ -36,6 +36,7 @@ Console.Write("Input a number: ");
 int num = Convert.ToInt32(Console.ReadLine());
 int number = ThreeDigit(num);
 Console.WriteLine(number);
+*/
 
 //Задача 3: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 /*
