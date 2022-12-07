@@ -38,7 +38,7 @@ int number = ThreeDigit(num);
 Console.WriteLine(number);
 
 //Задача 3: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
-
+/*
 bool Days(int num)
 {
     if(num > 0 && num < 8)
@@ -62,3 +62,4 @@ bool Days(int num)
 Console.Write("Input a number from 1 to 7: ");
 int num = Convert.ToInt32(Console.ReadLine());
 Days(num);
+*/
