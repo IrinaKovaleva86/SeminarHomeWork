@@ -58,3 +58,20 @@ double z2 = Convert.ToDouble(Console.ReadLine());
 double dist = Distance(x1, y1, z1, x2, y2, z2);
 Console.WriteLine("Расстояние между точками " + dist);
 */
+
+//Задача 3.Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+
+/*
+void Cube(int num)
+ {
+    int count = 1;
+    while (count <= num)
+    {
+        Console.Write($"{Math.Pow(count, 3)}" + " ");
+        count++;
+    }
+ }
+Console.Write("Input a number: ");
+int number = Convert.ToInt32(Console.ReadLine());
+Cube(number);
+*/
