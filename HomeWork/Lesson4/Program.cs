@@ -18,7 +18,7 @@ Console.WriteLine ($"A в степени B равно {deg}");
 */
 
 //Задача 2: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
-
+/*
 int Sum(int num)
 {
     int result = 0;
@@ -33,3 +33,25 @@ Console.Write(("Input a number: "));
 int number = Convert.ToInt32(Console.ReadLine());
 int sum = Sum(number);
 Console.WriteLine ($"Сумма цифр равна {sum}");
+*/
+// Задача 3: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+/*
+int[] CreateArray(int size)
+{
+    int[] array = new int[size];
+    for(int i = 0; i < size; i++)
+    {
+        Console.Write("Input a number: ");
+        int number = Convert.ToInt32(Console.ReadLine());
+        array[i] = number;
+    }
+    return array;
+}
+void ShowArray(int[] array)
+{
+    for(int i = 0; i < array.Length; i++)
+    Console.Write(array[i] + " ");
+}
+int[] myArray = CreateArray(8);
+ShowArray(myArray);
+*/
