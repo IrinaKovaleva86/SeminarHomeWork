@@ -16,3 +16,20 @@ int numB = Convert.ToInt32(Console.ReadLine());
 int deg = Degree(numA, numB);
 Console.WriteLine ($"A в степени B равно {deg}");
 */
+
+//Задача 2: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+
+int Sum(int num)
+{
+    int result = 0;
+    while(num != 0)
+    {
+        result += num % 10;
+        num = num / 10;
+    }
+    return result;
+}
+Console.Write(("Input a number: "));
+int number = Convert.ToInt32(Console.ReadLine());
+int sum = Sum(number);
+Console.WriteLine ($"Сумма цифр равна {sum}");
