@@ -16,3 +16,26 @@ void ShowArray(int[] array)
     }
     Console.WriteLine();
 }
+
+// Задача 1. Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
+/*
+int EvenNumber(int[]array)
+{
+    int count = 0;
+    for(int i = 0; i < array.Length; i++)
+        if(array[i] >= 100 && array[i] < 1000)
+            if(array[i] % 2 == 0)
+                count += 1;
+    return count;
+}
+Console.Write("Input a number of elements: ");
+int size = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input a min value: ");
+int min = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input a max value: ");
+int max = Convert.ToInt32(Console.ReadLine());
+int[] myArray = CreateRandomArray(size,min,max);
+ShowArray(myArray);
+int even = EvenNumber(myArray);
+Console.WriteLine(even);
+*/
