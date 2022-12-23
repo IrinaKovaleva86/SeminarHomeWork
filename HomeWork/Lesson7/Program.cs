@@ -62,7 +62,7 @@ void Show2dArray(int[,] array)
 }
 
 // 2. Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, и возвращает значение этого элемента или же указание, что такого элемента нет.
-
+/*
 void ShowElement(int[,] array, int i1, int j1)
 {
     if(i1 < array.GetLength(0) && j1 < array.GetLength(1))
@@ -79,3 +79,25 @@ int j = Convert.ToInt32(Console.ReadLine());
 int[,] myArray = CreateRandom2dArray();
 Show2dArray(myArray);
 ShowElement(myArray, i, j);
+*/
+
+//3. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
+/*
+void FindAverage(int[,] array)
+{
+    for(int j = 0; j < array.GetLength(1); j++)
+    {
+        double avg = 0;
+        double sum = 0;
+        for(int i = 0; i < array.GetLength(0); i++)
+            sum += array[i,j]; 
+        avg = Math.Round(sum / array.GetLength(0),2);
+        Console.Write(avg + "  ");
+    }
+}
+
+int[,] myArray = CreateRandom2dArray();
+Show2dArray(myArray);
+FindAverage(myArray);
+*/
+
