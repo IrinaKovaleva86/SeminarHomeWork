@@ -26,3 +26,20 @@ int numN = Convert.ToInt32(Console.ReadLine());
 SumOfNumbers(numM,numN);
 Console.Write(SumOfNumbers(numM,numN));
 */
+
+// 3. Напишите программу вычисления функции Аккермана с помощью рекурсии. Даны два неотрицательных числа m и n.
+
+int Ackerman(int m,int n)
+{
+    if(m == 0) return n+1;
+    if (m > 0 && n == 0) return Ackerman(m-1,1);
+    if(m > 0 && n > 0) return Ackerman (m-1, Ackerman(m,n-1));
+    return Ackerman(m ,n);
+}
+Console.Write("Input the first number: ");
+int numM = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input the second number: ");
+int numN = Convert.ToInt32(Console.ReadLine());
+int ack = Ackerman(numM,numN);
+Console.Write($"A({numM},{numN}) = {ack}");
+
