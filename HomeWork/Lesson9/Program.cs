@@ -11,11 +11,12 @@ int num = Convert.ToInt32(Console.ReadLine());
 ShowNumbers(num);
 */
 
-// 1. Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N.
+// 2. Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N.
 /*
 int SumOfNumbers(int m, int n)
 {
-    if(n!=m) return SumOfNumbers(m,n-1) + n;
+    if(n > m) return SumOfNumbers(m, n-1) + n;
+    if(n < m) return SumOfNumbers(n,m);
     else return m;
 }
 
