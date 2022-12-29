@@ -1,0 +1,110 @@
+int[,] CreateRandom2dArray()
+{
+    Console.Write("Input a number of rows: ");
+    int rows = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Input a number of columns: ");
+    int columns = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Input a min value: ");
+    int minValue = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Input a max value: ");
+    int maxValue = Convert.ToInt32(Console.ReadLine());
+
+    int[,] array = new int[rows, columns];
+    for(int i = 0; i < rows; i++)
+        for(int j = 0; j < columns; j++)
+            array[i,j] = new Random().Next(minValue,maxValue);
+    return array;
+}
+
+void Show2dArray(int[,] array)
+{
+    for(int i = 0; i < array.GetLength(0); i++)
+    {
+        for(int j= 0; j<array.GetLength(1); j++)
+            Console.Write(array[i,j] + " ");
+        Console.WriteLine();
+    }
+    Console.WriteLine();
+}
+// 1. Задайте двумерный массив. Напишите программу, которая упорядочит по убыванию элементы каждой строки двумерного массива.
+/*
+int[,] SortMaxToMin(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for(int j = 0; j < array.GetLength(1); j++)
+        {
+            for(int k = 0; k < array.GetLength(1)-1; k++)
+            {
+                int[,] newArray = new int[i, k];
+                int temp = 0;
+                if(array[i,k] < array[i,k+1])
+                {
+                    temp = array[i,k];
+                    array[i,k] = array[i,k+1];
+                    array[i,k+1] = temp;
+                }
+            }
+        }
+    }
+    return array;
+}
+
+int[,] myArray = CreateRandom2dArray();
+Show2dArray(myArray);
+SortMaxToMin(myArray);
+Show2dArray(myArray);
+*/
+// 2. Задайте прямоугольный двумерный массив. Напишите программу, которая будет находить строку с наименьшей суммой элементов.
+/*
+void MinSumOfRow(int[,] array)
+{
+    int row = 0;
+    int minSum = 0;
+    for (int j = 0; j < array.GetLength(1); j++)
+        minSum += array[0,j]; 
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+		int sum = 0;
+        for(int j = 0; j < array.GetLength(1); j++)
+            sum += array[i,j];
+        if(sum < minSum)
+        {
+            minSum = sum;
+            row = i;
+        }
+     }
+    Console.WriteLine($"Строка c наименьшей суммой: {row + 1}");
+}
+
+int[,] myArray = CreateRandom2dArray();
+Show2dArray(myArray);
+MinSumOfRow(myArray);
+*/
+//3. Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц.
+/*
+void MultiplyMatrix (int[,] array, int[,]secondArray)
+{
+    if(array.GetLength(0) != secondArray.GetLength(1))
+        Console.Write("Матрицы нельзя перемножить");
+    int[,] result = new int[array.GetLength(0), secondArray.GetLength(1)];
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for(int j = 0; j < secondArray.GetLength(1); j++)
+        {
+            int sum = 0;
+            for(int k = 0; k < array.GetLength(1); k++)
+                sum += array[i,k]*secondArray[k,j];
+            result[i,j] = sum;
+            Console.Write(result[i,j] + " ");
+        }
+        Console.WriteLine();
+    } 
+}
+
+int[,] myArray1 = CreateRandom2dArray();
+int[,] myArray2 =CreateRandom2dArray();
+Show2dArray(myArray1);
+Show2dArray(myArray2);
+MultiplyMatrix(myArray1, myArray2);
+*/
